@@ -17,13 +17,10 @@
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:var(--font);background:var(--c0);color:var(--text);overflow-x:hidden;cursor:none;}
-
-/* CURSOR */
-#cursor{position:fixed;z-index:9999;width:10px;height:10px;border-radius:50%;background:var(--cyan);pointer-events:none;transform:translate(-50%,-50%);mix-blend-mode:screen;box-shadow:0 0 20px var(--cyan),0 0 40px rgba(0,245,255,.4);transition:width .2s,height .2s;}
-#cursor-ring{position:fixed;z-index:9998;width:34px;height:34px;border-radius:50%;border:1px solid rgba(0,245,255,.35);pointer-events:none;transform:translate(-50%,-50%);transition:all .1s ease-out;}
+body{font-family:var(--font);background:var(--c0);color:var(--text);overflow-x:hidden;}
 
 /* NOISE */
+body::after{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");opacity:.5;}
 body::after{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");opacity:.5;}
 
 /* CANVAS */
@@ -229,14 +226,11 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:2r
   .bento{grid-template-columns:1fr;}
   .b1,.b2,.b3,.b4,.b5,.b6,.b7{grid-column:span 1;}
   footer{padding:1.5rem;} .cta-box{padding:2.5rem 1.5rem;}
-  #cursor,#cursor-ring{display:none;} body{cursor:auto;}
 }
 </style>
 </head>
 <body>
 
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
 <canvas id="bg-canvas"></canvas>
 
 <!-- NAV -->
@@ -257,7 +251,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:2r
   </ul>
   <div class="nav-right">
     <a href="#" class="btn-ghost">Đăng nhập</a>
-    <a href="#" class="btn-nav-cta">
+    <a href="https://discord.com/oauth2/authorize?client_id=1499338025618903050&permissions=8&integration_type=0&scope=bot" class="btn-nav-cta">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026c.462-.62.874-1.275 1.226-1.963.021-.04.001-.088-.041-.104a13.201 13.201 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028z"/></svg>
       Thêm Bot
     </a>
@@ -285,9 +279,9 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:2r
       <span class="line1">Discord Bot</span>
       <span class="line2">Thế Hệ Mới</span>
     </h1>
-    <p class="hero-sub">Được thiết kế cho những server muốn vượt giới hạn. Quản lý thông minh, nhạc hi-fi, AI tích hợp sẵn — tất cả trong một lệnh duy nhất.</p>
+    <p class="hero-sub">Bot game RPG cho cộng đồng Hội Người Hèn - Gacha nhân vật, chiến đấu quái vật, quản lý profile và nhiều trò chơi vui vẻ!</p>
     <div class="hero-cta">
-      <a href="#" class="cta-main">
+      <a href="https://discord.com/oauth2/authorize?client_id=1499338025618903050&permissions=8&integration_type=0&scope=bot" class="cta-main">
         <div class="sh"></div>
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026c.462-.62.874-1.275 1.226-1.963.021-.04.001-.088-.041-.104a13.201 13.201 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028z"/></svg>
         Mời Bot — Miễn phí
@@ -350,50 +344,50 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:2r
 <!-- FEATURES -->
 <section class="section" id="features">
   <div class="sec-label">Tính năng</div>
-  <h2 class="sec-h">Mọi thứ trong <em>một bot</em><br>duy nhất.</h2>
+  <h2 class="sec-h">Tính năng <em>game RPG</em><br>cho Hội Người Hèn.</h2>
   <p class="sec-p">Không cần 6 bot khác nhau. Hội Người Hèn làm hết — và làm tốt hơn.</p>
   <div class="bento">
     <div class="bc b1">
-      <div class="ci ci-v">🎵</div>
-      <div class="ct">Nhạc Hi-Fi</div>
-      <div class="cd">Phát nhạc từ YouTube, Spotify, SoundCloud với chất lượng lossless. Hàng chờ thông minh, lyrics realtime, crossfade mượt mà.</div>
+      <div class="ci ci-c">🎲</div>
+      <div class="ct">Gacha Nhân Vật</div>
+      <div class="cd">Quay gacha để nhận nhân vật ngẫu nhiên với rarity khác nhau. Thu thập bộ sưu tập đầy đủ!</div>
       <div class="waveform" id="waveform"></div>
       <div class="cv">
-        <div class="cvr"><span class="cvk">Now playing</span><span class="cvv">lofi hip hop mix</span></div>
-        <div class="cvr"><span class="cvk">Quality</span><span class="cvv">320kbps</span></div>
-        <div class="cvr"><span class="cvk">Queue</span><span class="cvv">24 bài</span></div>
+        <div class="cvr"><span class="cvk">Last summon</span><span class="cvv">SSR Warrior</span></div>
+        <div class="cvr"><span class="cvk">Rate</span><span class="cvv">5% SSR</span></div>
+        <div class="cvr"><span class="cvk">Cost</span><span class="cvv">300 coins</span></div>
       </div>
     </div>
     <div class="bc b2">
-      <div class="ci ci-e">🛡️</div>
-      <div class="ct">Auto Moderation</div>
-      <div class="cd">AI phát hiện spam, link độc hại, nội dung vi phạm tự động. Log đầy đủ, cảnh báo theo cấp độ, không bỏ sót gì.</div>
-      <div class="shield-r"><div class="sr"></div><div class="sr"></div><div class="sr"></div><div class="sc">🛡️</div></div>
+      <div class="ci ci-w">⚔️</div>
+      <div class="ct">Chiến Đấu</div>
+      <div class="cd">Tham gia combat với quái vật để nhận kinh nghiệm, tiền và item. Lên level và mạnh hơn!</div>
+      <div class="shield-r"><div class="sr"></div><div class="sr"></div><div class="sr"></div><div class="sc">⚔️</div></div>
     </div>
     <div class="bc b3">
-      <div class="ci ci-a">⭐</div>
-      <div class="ct">Leveling & XP</div>
-      <div class="cd">Hệ thống cấp độ tuỳ biến. Tự động thưởng role khi đạt mốc.</div>
+      <div class="ci ci-v">👥</div>
+      <div class="ct">Quản Lý Nhân Vật</div>
+      <div class="cd">Xem, chọn và sắp xếp đội hình nhân vật của bạn. Mỗi nhân vật có class và stats riêng.</div>
     </div>
     <div class="bc b4">
-      <div class="ci ci-c">🤖</div>
-      <div class="ct">AI tích hợp</div>
-      <div class="cd">Chat, tóm tắt, dịch ngay trong Discord.</div>
+      <div class="ci ci-e">📊</div>
+      <div class="ct">Profile Cá Nhân</div>
+      <div class="cd">Xem profile, inventory, tiền và thống kê chi tiết. Chuyển tiền cho bạn bè.</div>
     </div>
     <div class="bc b5">
-      <div class="ci ci-p">🎫</div>
-      <div class="ct">Ticket System</div>
-      <div class="cd">Hỗ trợ người dùng chuyên nghiệp với transcript tự động, category và SLA tracking.</div>
+      <div class="ci ci-a">🎰</div>
+      <div class="ct">1 chút hên xui :></div>
+      <div class="cd">Rủi ro cao, thưởng lớn!</div>
     </div>
     <div class="bc b6">
-      <div class="ci ci-w">🎮</div>
-      <div class="ct">Mini Games</div>
-      <div class="cd">20+ trò chơi: quiz, RPG, đua xe cho server luôn sôi động.</div>
+      <div class="ci ci-p">🛡️</div>
+      <div class="ct">Admin Tools</div>
+      <div class="cd">Công cụ quản lý server cho admin: reset, give item, và các lệnh đặc biệt.</div>
     </div>
     <div class="bc b7">
-      <div class="ci ci-v">💰</div>
-      <div class="ct">Economy</div>
-      <div class="cd">Tiền tệ, shop, giao dịch đầy đủ cho server của bạn.</div>
+      <div class="ci ci-v">📋</div>
+      <div class="ct">Menu Game</div>
+      <div class="cd">Menu chính với các nút nhanh: Quay gacha, Săn quái, và nhiều hơn nữa.</div>
     </div>
   </div>
 </section>
@@ -401,13 +395,15 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:2r
 <!-- COMMANDS -->
 <section class="cmds-section" id="commands">
   <div class="sec-label">Commands</div>
-  <h2 class="sec-h">Slash commands <em>mạnh mẽ</em></h2>
+  <h2 class="sec-h">Commands <em>RPG</em></h2>
   <div class="cmd-tabs">
     <button class="cmd-tab active" onclick="fc('all',this)">Tất cả</button>
-    <button class="cmd-tab" onclick="fc('music',this)">🎵 Nhạc</button>
-    <button class="cmd-tab" onclick="fc('mod',this)">🛡️ Mod</button>
-    <button class="cmd-tab" onclick="fc('fun',this)">🎮 Fun</button>
-    <button class="cmd-tab" onclick="fc('ai',this)">🤖 AI</button>
+    <button class="cmd-tab" onclick="fc('gacha',this)">🎲 Gacha</button>
+    <button class="cmd-tab" onclick="fc('combat',this)">⚔️ Combat</button>
+    <button class="cmd-tab" onclick="fc('characters',this)">👥 Nhân Vật</button>
+    <button class="cmd-tab" onclick="fc('profile',this)">📊 Profile</button>
+    <button class="cmd-tab" onclick="fc('gamble',this)">🎰 Gamble</button>
+    <button class="cmd-tab" onclick="fc('admin',this)">🛡️ Admin</button>
   </div>
   <div class="cmd-list" id="cmdList"></div>
 </section>
@@ -416,7 +412,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:2r
 <div class="mq-section" id="servers">
   <div class="section" style="padding-bottom:2rem">
     <div class="sec-label">Cộng đồng</div>
-    <h2 class="sec-h">Tin dùng bởi <em>12,500+ servers</em></h2>
+    <h2 class="sec-h">Cộng đồng <em>Hội Người Hèn</em></h2>
   </div>
   <div class="mq-fade"><div class="mq-track" id="t1"></div></div>
   <div class="mq-fade" style="margin-top:.75rem"><div class="mq-track mq-track-r" id="t2"></div></div>
@@ -426,10 +422,10 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:2r
 <div class="cta-section">
   <div class="cta-box">
     <div class="cta-ey">✦ Sẵn sàng chưa?</div>
-    <h2 class="cta-h">Nâng server của bạn<br>lên <span>tầm cao mới</span></h2>
-    <p class="cta-p">Miễn phí. Không cần thẻ. Chạy trong 30 giây.</p>
+    <h2 class="cta-h">Tham gia cộng đồng<br>Hội <span>Người Hèn</span></h2>
+    <p class="cta-p">Miễn phí. Không cần thẻ. Chơi game RPG ngay trong Discord.</p>
     <div class="cta-btns">
-      <a href="#" class="cta-main" style="font-size:.95rem;padding:.85rem 2rem">
+      <a href="https://discord.com/oauth2/authorize?client_id=1499338025618903050&permissions=8&integration_type=0&scope=bot" class="cta-main" style="font-size:.95rem;padding:.85rem 2rem">
         <div class="sh"></div>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026c.462-.62.874-1.275 1.226-1.963.021-.04.001-.088-.041-.104a13.201 13.201 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028z"/></svg>
         Mời Bot ngay
@@ -454,16 +450,6 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:2r
 </footer>
 
 <script>
-/* Cursor */
-const cur=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-(function animR(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animR);})();
-document.querySelectorAll('a,button').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.style.transform='translate(-50%,-50%) scale(2.5)';ring.style.transform='translate(-50%,-50%) scale(1.5)';});
-  el.addEventListener('mouseleave',()=>{cur.style.transform='translate(-50%,-50%) scale(1)';ring.style.transform='translate(-50%,-50%) scale(1)';});
-});
-
 /* Star canvas */
 const cv=document.getElementById('bg-canvas'),cx=cv.getContext('2d');
 let W,H,stars=[];
@@ -499,19 +485,19 @@ if(wf){for(let i=0;i<42;i++){const b=document.createElement('div');b.className='
 
 /* Commands */
 const cmds=[
-  {name:'/play',desc:'Phát nhạc từ YouTube / Spotify',b:'bf',bl:'Free',cat:'music'},
-  {name:'/queue',desc:'Xem & quản lý hàng chờ',b:'bf',bl:'Free',cat:'music'},
-  {name:'/skip',desc:'Bỏ qua bài hiện tại',b:'bf',bl:'Free',cat:'music'},
-  {name:'/filter bass',desc:'Thêm bass boost cực đã',b:'bf',bl:'Free',cat:'music'},
-  {name:'/ban',desc:'Cấm thành viên khỏi server',b:'bm',bl:'Mod',cat:'mod'},
-  {name:'/mute',desc:'Tắt tiếng có thời hạn',b:'bm',bl:'Mod',cat:'mod'},
-  {name:'/warn',desc:'Cảnh cáo và ghi log vi phạm',b:'bm',bl:'Mod',cat:'mod'},
-  {name:'/clear',desc:'Xoá hàng loạt tin nhắn',b:'ba',bl:'Admin',cat:'mod'},
-  {name:'/quiz',desc:'Bắt đầu vòng đố vui',b:'bf',bl:'Free',cat:'fun'},
-  {name:'/rps',desc:'Oẳn tù tì với bot',b:'bf',bl:'Free',cat:'fun'},
-  {name:'/ask',desc:'Hỏi AI bất kỳ điều gì',b:'bf',bl:'Free',cat:'ai'},
-  {name:'/summary',desc:'Tóm tắt đoạn hội thoại dài',b:'bf',bl:'Free',cat:'ai'},
-  {name:'/translate',desc:'Dịch nhanh sang bất kỳ ngôn ngữ',b:'bf',bl:'Free',cat:'ai'},
+  {name:'hcm',desc:'Gacha nhân vật ngẫu nhiên',b:'bf',bl:'Free',cat:'gacha'},
+  {name:'hb',desc:'Chiến đấu với quái vật',b:'bf',bl:'Free',cat:'combat'},
+  {name:'hnhanvat',desc:'Xem danh sách nhân vật',b:'bf',bl:'Free',cat:'characters'},
+  {name:'hchontuong',desc:'Chọn đội hình chiến đấu',b:'bf',bl:'Free',cat:'characters'},
+  {name:'hmyteam',desc:'Xem đội hình hiện tại',b:'bf',bl:'Free',cat:'characters'},
+  {name:'hme',desc:'Xem profile cá nhân',b:'bf',bl:'Free',cat:'profile'},
+  {name:'hpc',desc:'Thiết lập profile card',b:'bf',bl:'Free',cat:'profile'},
+  {name:'hhinv',desc:'Xem inventory',b:'bf',bl:'Free',cat:'profile'},
+  {name:'hgive',desc:'Chuyển tiền cho người khác',b:'bf',bl:'Free',cat:'profile'},
+  {name:'htx',desc:'Chơi tài xỉu',b:'bf',bl:'Free',cat:'gamble'},
+  {name:'hmenu',desc:'Mở menu game',b:'bf',bl:'Free',cat:'gacha'},
+  {name:'hadmin',desc:'Lệnh admin (chỉ admin)',b:'ba',bl:'Admin',cat:'admin'},
+  {name:'hhelp',desc:'Xem hướng dẫn sử dụng',b:'bf',bl:'Free',cat:'profile'},
 ];
 function fc(cat,btn){
   document.querySelectorAll('.cmd-tab').forEach(t=>t.classList.remove('active'));
