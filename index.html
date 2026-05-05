@@ -1,98 +1,184 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Discord Bot của tôi</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: #0f172a;
-      color: white;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discord Bot</title>
 
-    header {
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    h1 {
-      font-size: 50px;
-      margin: 0;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-    p {
-      color: #cbd5f5;
-    }
+body {
+  background: #0f172a;
+  color: white;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: white;
-      color: #4f46e5;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(15,23,42,0.8);
+  backdrop-filter: blur(10px);
+}
 
-    .section {
-      padding: 50px 20px;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
 
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #6366f1, #0f172a);
+  text-align: center;
+}
 
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      width: 250px;
-      border-radius: 12px;
-    }
+.hero h1 {
+  font-size: 60px;
+}
 
-    footer {
-      padding: 20px;
-      background: #020617;
-      font-size: 14px;
-    }
-  </style>
+.hero p {
+  color: #cbd5f5;
+  margin: 10px 0;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: #6366f1;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 0 20px #6366f1;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* SECTION */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 25px;
+  width: 260px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  font-size: 30px;
+}
+
+/* COMMANDS */
+.commands {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.commands div {
+  background: #1e293b;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  background: #020617;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>🤖 Bot Discord của tôi</h1>
-  <p>Bot đa năng cho server của bạn</p>
-  <a class="btn" href="https://discord.com/oauth2/authorize?client_id=YOUR_ID&scope=bot&permissions=8">
-    Mời Bot
-  </a>
-</header>
-
-<section class="section">
-  <h2>✨ Tính năng</h2>
-  <div class="features">
-    <div class="card">
-      <h3>🎵 Music</h3>
-      <p>Phát nhạc 24/7</p>
-    </div>
-    <div class="card">
-      <h3>🛡️ Moderation</h3>
-      <p>Quản lý server tự động</p>
-    </div>
-    <div class="card">
-      <h3>🎮 Game</h3>
-      <p>Mini game giải trí</p>
-    </div>
+<nav>
+  <h3>🤖 BotName</h3>
+  <div>
+    <a href="#features">Tính năng</a>
+    <a href="#commands">Lệnh</a>
+    <a href="#">Discord</a>
   </div>
+</nav>
+
+<section class="hero">
+  <h1>Bot Discord Xịn 🔥</h1>
+  <p>Quản lý - Giải trí - Âm nhạc tất cả trong 1</p>
+  <a class="btn" href="https://discord.com/oauth2/authorize?client_id=YOUR_ID&scope=bot&permissions=8">
+    🚀 Mời Bot
+  </a>
 </section>
 
 <section class="section">
-  <h2>📞 Liên hệ</h2>
-  <p>Discord: yourname#1234</p>
+  <h2>📊 Thống kê</h2>
+  <div class="stats">
+    <div class="stat">1000+ Server</div>
+    <div class="stat">50K Users</div>
+    <div class="stat">99.9% Uptime</div>
+  </div>
+</section>
+
+<section id="features" class="section">
+  <h2>✨ Tính năng</h2>
+  <div class="features">
+    <div class="card">🎵 Music 24/7</div>
+    <div class="card">🛡️ Moderation</div>
+    <div class="card">🎮 Mini Games</div>
+    <div class="card">⚡ Auto Role</div>
+  </div>
+</section>
+
+<section id="commands" class="section">
+  <h2>💻 Lệnh phổ biến</h2>
+  <div class="commands">
+    <div>/play → phát nhạc</div>
+    <div>/ban → ban user</div>
+    <div>/kick → kick user</div>
+    <div>/help → danh sách lệnh</div>
+  </div>
 </section>
 
 <footer>
