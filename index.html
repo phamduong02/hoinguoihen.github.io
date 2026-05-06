@@ -29,9 +29,9 @@ body::after{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;back
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 3rem;transition:all .4s;}
 nav.stuck{background:rgba(3,5,15,.88);backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid var(--border);padding:.9rem 3rem;}
-.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;}
-.logo-icon{width:36px;height:36px;}
-.logo-text{font-size:1.3rem;font-weight:900;letter-spacing:-.02em;color:#fff;}
+.logo{display:flex;align-items:center;gap:.85rem;text-decoration:none;}
+.logo-img{width:36px;height:36px;object-fit:contain;border-radius:12px;}
+.logo-text{font-size:1.3rem;font-weight:900;letter-spacing:-.02em;color:#fff;line-height:1;}
 .logo-text span{color:var(--cyan);}
 .nav-links{display:flex;gap:2.5rem;list-style:none;}
 .nav-links a{font-size:.875rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .25s;}
@@ -236,11 +236,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:2r
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="logo">
-    <svg class="logo-icon" viewBox="0 0 36 36" fill="none">
-      <path d="M18 2L32 10V26L18 34L4 26V10L18 2Z" fill="rgba(0,245,255,0.07)" stroke="rgba(0,245,255,0.38)" stroke-width="1.5"/>
-      <path d="M18 9L26 13.5V22.5L18 27L10 22.5V13.5L18 9Z" fill="rgba(0,245,255,0.13)" stroke="rgba(0,245,255,0.55)" stroke-width="1"/>
-      <circle cx="18" cy="18" r="3.5" fill="#00f5ff"/>
-    </svg>
+    <img src="https://cdn.discordapp.com/attachments/1224278119842844682/1499354056831795220/logo.png?ex=69fb1547&is=69f9c3c7&hm=d79968d8f232ccb21287ae7b2e02324faa51ac7227b14dbf01e611aca01ed5f4" alt="Hội Người Hèn" class="logo-img" />
     <span class="logo-text">Hội <span>Người Hèn</span></span>
   </a>
   <ul class="nav-links">
@@ -292,9 +288,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:2r
       </a>
     </div>
   </div>
-  <div class="scroll-ind">
-    <span class="scroll-txt">Scroll</span>
-    <div class="scroll-line"></div>
+
   </div>
 </section>
 
@@ -302,15 +296,15 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:2r
 <div class="stats-band">
   <div class="stats-inner">
     <div class="stat-block">
-      <div class="stat-val"><span class="count" data-to="12500">0</span><span class="a">+</span></div>
+      <div class="stat-val"><span class="count" data-to="100">0</span><span class="a">+</span></div>
       <div class="stat-lbl"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="var(--cyan)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Servers đang dùng</div>
     </div>
     <div class="stat-block">
-      <div class="stat-val"><span class="count" data-to="892">0</span><span class="a">K</span></div>
+      <div class="stat-val"><span class="count" data-to="40">0</span><span class="a">K</span></div>
       <div class="stat-lbl"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="var(--violet-l)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Người dùng</div>
     </div>
     <div class="stat-block">
-      <div class="stat-val"><span class="a">99.</span>9<span class="a">%</span></div>
+      <div class="stat-val"><span class="a">36.</span>63<span class="a">%</span></div>
       <div class="stat-lbl"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="var(--emerald)" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Uptime tháng này</div>
     </div>
     <div class="stat-block">
